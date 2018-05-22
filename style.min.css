@@ -1,5 +1,5 @@
 /*!
-Theme Name: Rosedale
+Theme Name: AGMSPTO
 Author: Fritz Healy
 Description: Description
 Version: 1.0.0
@@ -741,6 +741,11 @@ html[xmlns] .flexslider .slides{display:block}
 .copy>ul li a,.copy>ol li a{cursor:pointer}
 .copy>ul li a:hover,.copy>ol li a:hover{color:#404040}
 .copy>ul li ul.sub-menu,.copy>ol li ul.sub-menu{margin:0}
+.flexslider.row-1{width:100%;display:block}
+.flexslider.row-1>.slides li img{width:100%;display:block}
+#masthead>.row-2>.wrapper.cap .logo{margin:0}
+#masthead>.row-2>.wrapper.cap .logo a{display:block}
+#masthead>.row-2>.wrapper.cap .logo a img{display:block;width:100%}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

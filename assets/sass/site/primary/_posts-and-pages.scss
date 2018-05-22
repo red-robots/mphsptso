@@ -1,0 +1,83 @@
+.template-index {
+	>.row-2 {
+		>.wrapper.cap {
+			.tagline {
+
+			}
+			.subline {
+
+			}
+		}
+	}
+	>.row-3 {
+		>.wrapper.cap {
+			>.col {
+				header {
+					h2 {
+
+					}
+				}
+			}
+			>.col-1 {
+				.news {
+					.post {
+						.date {
+
+						}
+						header {
+							h3 {
+
+							}
+						}
+						.copy {
+
+						}
+						.read-more {
+							a.button {
+
+							}
+						}
+					}
+				}
+			}
+			>.col-2 {
+				.events {
+					.event {
+						.date {
+
+						}
+						header {
+							h3 {
+
+							}
+						}
+						.time {
+
+						}
+					}
+				}
+				.view-more {
+					a {
+
+					}
+				}
+			}
+			>.col-3 {
+				.quick-links {
+					ul {
+						li {
+							a {
+
+							}
+						}
+					}
+				}
+				.email-signup {
+					a {
+
+					}
+				}
+			}
+		}
+	}
+}

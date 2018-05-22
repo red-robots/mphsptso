@@ -85,3 +85,53 @@
 	  }
 	}
 }
+
+.flexslider.row-1 {
+	width: 100%;
+	display: block;
+	>.slides {
+		li {
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+}
+
+#masthead {
+	>.row-1 {
+
+	}
+	>.row-2 {
+		>.wrapper.cap {
+			nav.left-nav, nav.right-nav {
+				>div {
+					ul {
+						li {
+							a {
+
+							}
+						}
+					}
+				}
+			}
+			.logo {
+				margin: 0;
+				a {
+					display: block;
+					img {
+						display: block;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+#colophon {
+	>.wrapper.cap {
+
+	}
+}
