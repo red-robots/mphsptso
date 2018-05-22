@@ -26,28 +26,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row-1">
-			<div class="wrapper cap">
-				<?php $phone = get_field("phone_number","option");
-				$address_line_1 = get_field("address_line_1","option");
-				$address_line_2 = get_field("address_line_2","option");
-				$support_text = get_field("support_text","option");
-				$support_link = get_field("support_link","option");
-				if($support_link && $support_text):?>
-					<a href="<?php echo $support_link;?>">
-						<?php echo $support_text;?>
-					</a>
-				<?php endif;
-				if($address_line_1 && $address_line_2):?>
-					<div class="address">
-						<?php echo $address_line_1."&nbsp;|&nbsp;".$address_line_2;?>
-					</div><!--.address-->
-				<?php endif;
-				if($phone):?>
-					<div class="phone">
-						<?php echo $phone;?>
-					</div><!--.phone-->
-				<?php endif;?>
-			</div><!--.wrapper-->
+			<!--empty row-->
 		</div><!--.row-1-->
 		<div class="row-2">
 			<div class="wrapper cap">

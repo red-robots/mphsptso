@@ -17,11 +17,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
+			<?php
 			/* Start the Loop */
-			$post = get_post();
-			if ( $post ) : 
-				setup_postdata($post);
+			$wp_query = new WP_Query(array('pagename'=>'home'));
+			if ( have_posts() ) : the_post(); 
 
 				get_template_part( 'template-parts/content', 'index' );
 
