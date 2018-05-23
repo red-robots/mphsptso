@@ -15,10 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper cap">
-			<?php $copyright = get_field("copyright");
-			if($copyright):
-				echo $copyright;
-			endif;?>
+			<?php wp_nav_menu( array( 'theme_location' => 'footer') ); ?>
 		</div><!--.wrapper-->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
