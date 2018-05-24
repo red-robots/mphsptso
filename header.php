@@ -29,7 +29,7 @@
 			<!--empty row-->
 		</div><!--.row-1-->
 		<div class="row-2">
-			<div class="wrapper cap">
+			<div class="wrapper cap alt">
 				<nav class="left-nav" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'left-nav' ) ); ?>
 				</nav><!-- .left-nav -->

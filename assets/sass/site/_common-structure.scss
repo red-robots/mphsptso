@@ -4,9 +4,28 @@
 	padding-left: 20px !important;
 	margin: 0 auto;
 	@media screen and (min-width: $midwidth){
-		padding-right: 4% !important;
-		padding-left: 4% !important;
+		padding-right: 6% !important;
+		padding-left: 6% !important;
 	}
+	&.alt {
+		@media screen and (min-width: $midwidth){
+			padding-right: 4% !important;
+			padding-left: 4% !important;
+		}
+
+	}
+}
+.read-more {
+	text-align: center;
+}
+.button {
+	background-color: $color__a-red;
+	color: white;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 10px 20px;
+	border: 1px solid black;
+	text-decoration: none;
 }
 .clear-bottom {
 	&:after {
@@ -101,8 +120,10 @@
 
 #masthead {
 	>.row-1 {
-		padding: 50px 0;
-		background-color: $color__a-grey;
+		padding: 30px 0;
+		@media screen and (min-width: $tabwidth){
+			padding: 50px 0;
+		}
 	}
 	>.row-2 {
 		background-color: $color__a-red;
@@ -118,38 +139,93 @@
 				@include flexbox-direction(row);
 				padding: 40px 0;
 			}
-			nav.left-nav {
+			button.menu-toggle {
 				order: 2;
+				box-shadow: none;
+				border: 2px solid black;
+				text-shadow: none;
+				text-transform: uppercase;
+				color: black;
+				padding: 10px 20px;
+				text-align: center;
+				display: inline-block;
+				margin: 0 0 20px 0;
+				@media screen and (min-width: $tabwidth){
+					display: none;
+				}
+				&.active {
+					color: white;
+					border: 2px solid white;
+					background-color: black;
+				}
+			}
+			nav.left-nav {
+				order: 3;
 				@media screen and (min-width: $tabwidth){
 					order: 1;
+					padding-right: 30px;
+				}
+				@media screen and (min-width: $deskwidth){
+					order: 1;
+					padding-right: 60px;
 				}
 			}
 			nav.right-nav {
-				order: 3;
+				order: 4;
 				@media screen and (min-width: $tabwidth){
 					order: 3;
+					padding-left: 30px;
+				}
+				@media screen and (min-width: $deskwidth){
+					padding-left: 60px;
 				}
 			}
 			nav.left-nav, nav.right-nav {
+				display: none;
 				@media screen and (min-width: $tabwidth){
 					@include flexbox-flex(1,1,auto);
+					display: block;
+				}
+				&.active {
+					display: block;
 				}
 				>div {
 					ul {
 						margin: 0;
 						padding: 0;
+						text-align: center;
 						@media screen and (min-width: $tabwidth){
 							@include flexbox();
 							@include flexbox-align-items(center);
 							@include flexbox-align-content(center);
 							@include flexbox-justify(space-between);
+							@include flexbox-direction(column);
+						}
+						@media screen and (min-width: $deskwidth){
+							@include flexbox-direction(row);
 						}
 						li {
 							list-style-type: none;
+							@media screen and (min-width: $deskwidth){
+								margin: 0 10px;
+							}
+							&:first-child {
+								margin-left: 0;
+							}
+							&:last-child {
+								margin-right: 0;
+							}
 							a {
 								text-decoration: none;
 								text-transform: uppercase;
 								color: white;
+								font-size: 16px;
+								@media screen and (min-width: $tabwidth){
+									font-size: 14px;
+								}
+								@media screen and (min-width: $deskwidth){
+									font-size: 18px;
+								}
 							}
 						}
 					}
@@ -157,14 +233,23 @@
 			}
 			.logo {
 				order: 1;
-				margin: 0;
-				max-width: 250px;
+				margin: 0 auto;
+				width: 80%;
 				@media screen and (min-width: $tabwidth){
 					order: 2;
-					@include translatexy(0,-50%);
+					margin: 0;
+					z-index: 100;
+					height: 0;
+					overflow: visible;
+					max-width: 200px;
+					min-width: 120px;
 				}
 				a {
 					display: block;
+					@include translatexy(0,-50px);
+					@media screen and (min-width: $tabwidth){
+						@include translatexy(0,-50%);
+					}
 					img {
 						display: block;
 						width: 100%;

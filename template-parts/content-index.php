@@ -41,7 +41,7 @@
         </div><!--.row-2-->
     <?php endif;?>
     <div class="row-3">
-        <div class="wrapper cap">
+        <div class="wrapper cap clear-bottom">
             <aside class="col col-1">
                 <?php $today = date('Ymd');
                 $recent_news_title = get_field("recent_news_title","option");

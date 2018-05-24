@@ -38,6 +38,10 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	$('.flexslider').flexslider({
 		animation: "slide",
+		controlNav: false,
+		directionNav: false,
+		smoothHeight: true
+
 	}); // end register flexslider
 	
 	/*
@@ -79,5 +83,20 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	new WOW().init();
+
+	$('#masthead .menu-toggle').click(function(){
+		var $this = $(this);
+		var $right_nav = $('#masthead nav.right-nav');
+		var $left_nav = $('#masthead nav.left-nav');
+		if($this.hasClass('active')){
+			$this.removeClass('active');
+			$right_nav.removeClass('active');
+			$left_nav.removeClass('active');
+		} else {
+			$this.addClass('active');
+			$right_nav.addClass('active');
+			$left_nav.addClass('active');
+		}
+	});
 
 });// END #####################################    END
