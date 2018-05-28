@@ -10,18 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-index"); ?>>
-    <?php $flexslider = get_field("flexslider");
-    if($flexslider):?>
-        <div class="flexslider row-1">
-            <ul class="slides">
-                <?php foreach($flexslider as $slide):?>
-                    <?php if($slide['image']):?>
-                        <li><img src="<?php echo $slide['image']['url'];?>" alt="<?php echo $slide['image']['alt'];?>"></li>
-                    <?php endif;?>
-                <?php endforeach;?>
-            </ul><!--.slides-->
-        </div><!--.flexslider-->
-    <?php endif;?>
+    <?php get_template_part("template-parts/flexslider");?>
     <?php $tagline = get_field("tagline");
     $subline = get_field("subline");
     if($tagline||$subline):?>

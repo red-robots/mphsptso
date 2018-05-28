@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php.
+ * Template part for displaying page content in page-sitemap.php.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -18,6 +18,7 @@
 			</header>
 			<div class="copy">
 				<?php the_content();?>
+				<?php wp_nav_menu( array( 'theme_location' => 'sitemap') ); ?>
 			</div><!--.copy-->
 		</section><!--.col-2-->
 		<?php get_template_part("template-parts/quicklinks");?>
