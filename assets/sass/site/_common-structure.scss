@@ -276,12 +276,17 @@
 			padding: 0;
 			text-align: center;
 			li {
-				display: inline-block;
 				list-style-type: none;
+				@media screen and (min-width: $tabwidth){
+					display: inline-block;
+				}
 				&:before {
 					content: "|";
 					margin: 0 5px;
-					display: inline-block;
+					display: none;
+					@media screen and (min-width: $tabwidth){
+						display: inline-block;
+					}
 				}
 				&:first-child:before {
 					display: none;

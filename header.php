@@ -33,15 +33,18 @@
 				<nav class="left-nav" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'left-nav' ) ); ?>
 				</nav><!-- .left-nav -->
-				<?php if(is_home()): ?>
-					<h1 class="logo">
-						<a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri()."/images/logo.png";?>" alt="<?php bloginfo('name'); ?>"></a>
-					</h1>
-				<?php else: ?>
-					<div class="logo">
-						<a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri()."/images/logo.png";?>" alt="<?php bloginfo('name'); ?>"></a>
-					</div>
-				<?php endif; ?>
+				<?php $logo = get_field("logo","option");
+				if($logo):
+					if(is_home()): ?>
+						<h1 class="logo">
+							<a href="<?php bloginfo('url'); ?>"><img src="<?php echo $logo['sizes']['medium'];?>" alt="<?php bloginfo('name'); ?>"></a>
+						</h1>
+					<?php else: ?>
+						<div class="logo">
+							<a href="<?php bloginfo('url'); ?>"><img src="<?php echo $logo['sizes']['medium'];?>" alt="<?php bloginfo('name'); ?>"></a>
+						</div>
+					<?php endif; 
+				endif;?>
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
 				<nav class="right-nav" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'right-nav') ); ?>
