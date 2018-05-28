@@ -19,13 +19,17 @@
 	text-align: center;
 }
 .button {
-	background-color: $color__a-red;
+	background-color: $color__a-bright-red;
 	color: white;
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 10px 20px;
 	border: 1px solid black;
 	text-decoration: none;
+	text-align: center;
+	&:hover {
+		color: white;
+	}
 }
 .clear-bottom {
 	&:after {
