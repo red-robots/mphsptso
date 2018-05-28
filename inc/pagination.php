@@ -3,9 +3,6 @@
 
 function pagi_posts_nav() {
 
-	if( is_singular() )
-		return;
-
 	global $wp_query;
 
 	/** Stop execution if there's only 1 page */

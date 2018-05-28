@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * Template Name: Blog
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -12,11 +12,13 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) :
+			<?php
+			if ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', 'list' );
+				get_template_part( 'template-parts/content', 'list' );
 
-		endif; // End of the loop.?>
+			endif; // End of the loop.
+			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

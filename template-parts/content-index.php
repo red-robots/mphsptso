@@ -86,53 +86,19 @@
                     <header>
                         <h2><?php echo $upcoming_events_title;?></h2>
                     </header>
-                <?php endif;
-                $args = array(
-                    'post_type'=>'event',
-                    'posts_per_page'=>3,
-                    'orderby'=>'meta_value_num',
-                    'meta_key'=>'date',
-                    'order'=>'ASC',
-                    'meta_query'=>array(array(
-                        'key'=>'date',
-                        'value'=>$today,
-                        'compare'=>'>='
-                    ))
-                );
-                $query = new WP_Query($args);
-                if($query->have_posts()):?>
-                    <div class="wrapper">
-                        <div class="events">
-                            <?php while($query->have_posts()): $query->the_post();?>
-                                <section class="event">
-                                    <?php $date = get_field("date");
-                                    if($date):?>
-                                        <div class="date">
-                                            <?php echo (new DateTime($date))->format('F j, Y');?>
-                                        </div><!--.date-->
-                                    <?php endif;?>
-                                    <header>
-                                        <h3><?php the_title();?></h3>
-                                    </header>
-                                    <?php $time = get_field("time");
-                                    if($time):?>
-                                        <div class="time">
-                                            <?php echo $time;?>
-                                        </div><!--.time-->
-                                    <?php endif;?>
-                                </section><!--.event-->
-                            <?php endwhile;?>
-                        </div><!--.events-->
-                        <?php $calendar_link = get_field("calendar_link","option");
-                        $view_calendar_text = get_field("view_calendar_text","option");
-                        if($view_calendar_text&&$calendar_link):?>
-                            <div class="view-more">
-                                <a href="<?php echo $calendar_link;?>"><?php echo $view_calendar_text;?></a>
-                            </div><!--.view-more-->
-                        <?php endif;
-                        wp_reset_postdata();?>
-                    </div><!--.wrapper-->
                 <?php endif;?>
+                <div class="wrapper">
+                    <div class="events">
+                        <?php echo do_shortcode('[calendar id="114"]'); ?>
+                    </div><!--.events-->
+                    <?php $calendar_link = get_field("calendar_link","option");
+                    $view_calendar_text = get_field("view_calendar_text","option");
+                    if($view_calendar_text&&$calendar_link):?>
+                        <div class="view-more">
+                            <a href="<?php echo $calendar_link;?>"><?php echo $view_calendar_text;?></a>
+                        </div><!--.view-more-->
+                    <?php endif;?>
+                </div><!--.wrapper-->
             </aside><!--.col.col-2-->
             <aside class="col col-3">
                 <?php get_template_part("template-parts/quicklinks");?>
