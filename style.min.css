@@ -787,6 +787,14 @@ html[xmlns] .flexslider .slides{display:block}
 #colophon>.wrapper.cap ul li:before{content:"|";margin:0 5px;display:inline-block}
 #colophon>.wrapper.cap ul li:first-child:before{display:none}
 #colophon>.wrapper.cap ul li a{color:inherit;text-decoration:none}
+.wrapper.quicklinks>header{margin:0 0 20px 0}
+.wrapper.quicklinks>header h2{margin:0;color:#054742;font-weight:500;text-transform:uppercase;font-size:20px}
+@media screen and (min-width:600px){.wrapper.quicklinks>header h2{font-size:30px}
+}.wrapper.quicklinks .quick-links ul{margin:0;padding:0}
+.wrapper.quicklinks .quick-links ul li{list-style-type:none;margin:15px 0 0 0;box-shadow:1px 1px 2px rgba(0,0,0,0.2);-webkit-transition:box-shadow .2s;transition:box-shadow .2s}
+.wrapper.quicklinks .quick-links ul li:hover{box-shadow:1px 1px 2px rgba(0,0,0,0.5)}
+.wrapper.quicklinks .quick-links ul li a{background-color:white;display:block;border-left:8px solid #98121b;padding:20px;text-decoration:none;color:inherit}
+.wrapper.quicklinks .email-signup{margin:15px 0 0 0;text-align:center}
 .template-index>.row-2>.wrapper.cap{padding:20px 0;text-align:center}
 @media screen and (min-width:600px){.template-index>.row-2>.wrapper.cap{padding:40px 0}
 }.template-index>.row-2>.wrapper.cap .tagline{font-weight:700;font-size:25px}
@@ -824,12 +832,17 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.template-index>.row-3>.wrapper.cap>.col-2>.wrapper .view-more a{font-size:18px}
 }.template-index>.row-3>.wrapper.cap>.col-3{margin:20px 0 0 0}
 @media screen and (min-width:1200px){.template-index>.row-3>.wrapper.cap>.col-3{width:25%;margin:0;float:left}
-}.template-index>.row-3>.wrapper.cap>.col-3 .quick-links ul{margin:0;padding:0}
-.template-index>.row-3>.wrapper.cap>.col-3 .quick-links ul li{list-style-type:none;margin:15px 0 0 0;box-shadow:1px 1px 2px rgba(0,0,0,0.2);-webkit-transition:box-shadow .2s;transition:box-shadow .2s}
-.template-index>.row-3>.wrapper.cap>.col-3 .quick-links ul li:hover{box-shadow:1px 1px 2px rgba(0,0,0,0.5)}
-.template-index>.row-3>.wrapper.cap>.col-3 .quick-links ul li a{background-color:white;display:block;border-left:8px solid #98121b;padding:20px;text-decoration:none;color:inherit}
-.template-index>.row-3>.wrapper.cap>.col-3 .email-signup{margin:15px 0 0 0;text-align:center}
-.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}.template-page>.wrapper.cap{padding:20px 0}
+@media screen and (min-width:600px){.template-page>.wrapper.cap{padding:40px 0}
+}@media screen and (min-width:1200px){.template-page>.wrapper.cap{padding:80px 0 120px 0}
+}@media screen and (min-width:1200px){.template-page>.wrapper.cap>.col-1{float:left;width:75%;padding:0 40px 0 0}
+}.template-page>.wrapper.cap>.col-1>header h1{font-weight:700;font-size:25px;margin:0}
+@media screen and (min-width:1200px){.template-page>.wrapper.cap>.col-1>header h1{font-size:35px}
+}.template-page>.wrapper.cap>.col-1 .copy{margin:20px 0 0 0}
+@media screen and (min-width:1200px){.template-page>.wrapper.cap>.col-1 .copy{margin:40px 0 0 0}
+}.template-page>.wrapper.cap>.wrapper.quicklinks{margin:40px 0 0 0}
+@media screen and (min-width:1200px){.template-page>.wrapper.cap>.wrapper.quicklinks{margin:0;float:left;width:25%}
+}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
