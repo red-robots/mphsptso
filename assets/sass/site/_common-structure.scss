@@ -277,8 +277,10 @@
 			text-align: center;
 			li {
 				list-style-type: none;
+				margin: 5px 0;
 				@media screen and (min-width: $tabwidth){
 					display: inline-block;
+					margin: 0;
 				}
 				&:before {
 					content: "|";
