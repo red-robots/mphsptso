@@ -26,7 +26,14 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row-1">
-			<!--empty row-->
+			<div class="wrapper cap clear-bottom">
+				<?php $facebook_link = get_field("facebook_link","option");
+				if($facebook_link):?>
+					<div class="social">
+						<a href="<?php echo $facebook_link;?>"><i class="fa fa-facebook"></i></a>
+					</div><!--.social-->
+				<?php endif;?>
+			</div><!--.wrapper-->
 		</div><!--.row-1-->
 		<div class="row-2">
 			<div class="wrapper cap alt">

@@ -57,16 +57,18 @@
 	h1, h2, h3 {
 	  margin: 0 0 10px 0;
 	  text-transform: uppercase;
-	  color: $color__text-main;
 	}
 	h1 {
 	  font-size: 30px;
+	  color: $color__text-main;
 	}
 	h2 {
-	  font-size: 25px;
+	  font-size: 23px;
+	  color: $color__a-green;
 	}
 	h3 {
-	  font-size: 20px;
+	  font-size: 18px;
+	  color: $color__a-green;
 	}
 	>ul, >ol {
 	  padding: 0;
@@ -95,7 +97,30 @@
 	  }
 	}
 }
+.social {
+	text-align: center;
+	a {
+		display: inline-block;
+		margin: 0 5px;
+		border-radius: 50%;
+		background-color: $color__a-bright-red;
+		color: white;
+		text-align: center;
+		font-size: 14px;
+		padding: 2px 0;
+		width: 25px;
+		height: 25px;
+		@media screen and (min-width: $tabwidth){
+			font-size: 20px;
+			padding: 6px 0;
+			width: 40px;
+			height: 40px;
+		}
+		i {
 
+		}
+	}
+}
 #primary .button {
 	background-color: $color__a-bright-red;
 	color: white;
@@ -125,9 +150,16 @@
 
 #masthead {
 	>.row-1 {
-		padding: 30px 0;
-		@media screen and (min-width: $tabwidth){
-			padding: 50px 0;
+		>.wrapper.cap {
+			padding: 20px 0 40px 0;
+			@media screen and (min-width: $tabwidth){
+				padding: 90px 0 10px 0;
+			}
+			.social {
+				@media screen and (min-width: $tabwidth){
+					float: right;
+				}
+			}
 		}
 	}
 	>.row-2 {
@@ -312,7 +344,7 @@
 			text-transform: uppercase;
 			font-size: 20px;
 			@media screen and (min-width: $tabwidth){
-				font-size: 30px;
+				font-size: 26px;
 			}
 		}
 	}
@@ -362,7 +394,7 @@
 				text-transform: uppercase;
 				font-size: 20px;
 				@media screen and (min-width: $tabwidth){
-					font-size: 30px;
+					font-size: 26px;
 				}
 			}
 		}

@@ -43,14 +43,8 @@
                 $args = array(
                     'post_type'=>'post',
                     'posts_per_page'=>2,
-                    'orderby'=>'meta_value_num',
-                    'meta_key'=>'date',
-                    'order'=>'ASC',
-                    'meta_query'=>array(array(
-                        'key'=>'date',
-                        'value'=>$today,
-                        'compare'=>'>='
-                    ))
+                    'orderby'=>'date',
+                    'order'=>'ASC'
                 );
                 $query = new WP_Query($args);
                 if($query->have_posts()):?>
@@ -105,4 +99,22 @@
             </aside><!--.col.col-3-->
         </div><!--.wrapper.cap-->
     </div><!--.row-3-->
+    <?php $sponsors = get_field("sponsors");
+    if($sponsors):?>
+        <div class="row-4">
+            <div class="wrapper cap">
+                <?php foreach($sponsors as $sponsor):
+                    $image = $sponsor['image'];
+                    $link = $sponsor['link'];
+                    if($link):?>
+                        <a href="<?php echo $link;?>">
+                    <?php endif;?>
+                        <img src="<?php echo $image['sizes']['medium'];?>" alt="<?php echo $image['alt'];?>">
+                    <?php if($link):?>
+                        </a>
+                    <?php endif;?>
+                <?php endforeach;?>
+            </div><!--.wrapper-->
+        </div><!--.row-4-->
+    <?php endif;?>
 </article><!-- #post-## -->

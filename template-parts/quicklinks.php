@@ -13,7 +13,7 @@
 					$title = $link['title'];
 					$link = $link['link'];
 					if($link&&$title):?>
-						<li><a href="<?php echo $link;?>"><?php echo $title;?></a></li>    
+						<li><a href="<?php echo $link;?>" target="_blank"><?php echo $title;?></a></li>    
 					<?php endif;?>
 				<?php endforeach;?>
 			</ul>
