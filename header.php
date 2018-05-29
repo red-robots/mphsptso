@@ -30,7 +30,7 @@
 				<?php $facebook_link = get_field("facebook_link","option");
 				if($facebook_link):?>
 					<div class="social">
-						<a href="<?php echo $facebook_link;?>"><i class="fa fa-facebook"></i></a>
+						<a href="<?php echo $facebook_link;?>" target="_blank"><i class="fa fa-facebook"></i></a>
 					</div><!--.social-->
 				<?php endif;?>
 			</div><!--.wrapper-->
