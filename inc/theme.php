@@ -13,10 +13,12 @@
 function my_login_logo() { ?>
 <style type="text/css">
   body.login div#login h1 a {
-  	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
-  	background-size: 327px 409px;
-  	width: 327px;
-  	height: 409px;
+  	background-image: url(<?php $logo = get_field("logo","option"); if($logo) echo $logo['url'];?>);
+    background-size: 100% auto;
+    width: 100%;
+    height: 200px;
+    display: block;
+
   }
 </style>
 <?php }
