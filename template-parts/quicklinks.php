@@ -27,7 +27,7 @@
 	$email_signup_text = get_field("email_signup_text","option");
 	if($email_signup_text&&$email_signup_link):?>
 		<div class="email-signup">
-			<a class="button" href="<?php echo $email_signup_link;?>"><?php echo $email_signup_text;?></a>
+			<a class="button" target="_blank" href="<?php echo $email_signup_link;?>"><?php echo $email_signup_text;?></a>
 		</div><!--.email-signup-->
 	<?php endif;?>
 </aside><!--.wrapper.quicklinks-->
