@@ -9,11 +9,15 @@
 	if($quick_links):?>
 		<div class="quick-links">
 			<ul>
-				<?php foreach($quick_links as $link):
+			<?php foreach($quick_links as $link):
 					$title = $link['title'];
-					$link = $link['link'];
-					if($link&&$title):?>
-						<li><a href="<?php echo $link;?>" target="_blank"><?php echo $title;?></a></li>    
+					$link_or_file = $link['link_or_file'];
+					$file = $link['file'];
+					$href = $link['link'];
+					if(strcmp($link_or_file,'link')==0&&$href&&$title):?>
+						<li><a href="<?php echo $href;?>" target="_blank"><?php echo $title;?></a></li>    
+					<?php elseif(strcmp($link_or_file,'file')==0&&$file&&$title):?>
+						<li><a href="<?php echo $file['url'];?>" target="_blank"><?php echo $title;?></a></li>
 					<?php endif;?>
 				<?php endforeach;?>
 			</ul>
