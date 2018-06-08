@@ -82,10 +82,13 @@
                     </header>
                 <?php endif;?>
                 <div class="wrapper">
-                    <div class="events">
-                        <?php echo do_shortcode('[calendar id="114"]'); ?>
-                    </div><!--.events-->
-                    <?php $calendar_link = get_field("calendar_link","option");
+                    <?php $calendar_id = get_field("calendar_id","option");
+                    if($calendar_id):?>
+                        <div class="events">
+                            <?php echo do_shortcode('[calendar id="'.$calendar_id.'"]'); ?>
+                        </div><!--.events-->
+                    <?php endif;
+                    $calendar_link = get_field("calendar_link","option");
                     $view_calendar_text = get_field("view_calendar_text","option");
                     if($view_calendar_text&&$calendar_link):?>
                         <div class="view-more">
