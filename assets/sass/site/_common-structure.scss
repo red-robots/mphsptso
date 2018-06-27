@@ -344,6 +344,8 @@
 		}
 	}
 	.quick-links {
+		background-color: $color__a-secondary;
+		padding: 20px;
 		ul {
 			margin: 0;
 			padding: 0;
@@ -358,7 +360,8 @@
 				a {
 					background-color: white;
 					display: block;
-					border-left: 8px solid $color__a-secondary;
+					// border-left: 8px solid $color__a-secondary;
+					border: 1px solid #fff;
 					padding: 20px;
 					text-decoration: none;
 					color: inherit;
