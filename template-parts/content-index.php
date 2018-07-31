@@ -44,7 +44,7 @@
                     'post_type'=>'post',
                     'posts_per_page'=>2,
                     'orderby'=>'date',
-                    'order'=>'ASC'
+                    'order'=>'DESC'
                 );
                 $query = new WP_Query($args);
                 if($query->have_posts()):?>
