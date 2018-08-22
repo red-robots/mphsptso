@@ -18,6 +18,12 @@
 			</header>
 			<div class="copy">
 				<?php the_content();?>
+				<?php if(is_page()) {
+					$archive = get_field('archives');
+						if( $archive ){
+							echo $archive;
+						}
+					}?>
 			</div><!--.copy-->
 		</section><!--.col-2-->
 		<?php get_template_part("template-parts/quicklinks");?>
