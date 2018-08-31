@@ -106,6 +106,7 @@
     if($sponsors):?>
         <div class="row-4">
             <div class="wrapper cap">
+            <h2>Thank you to the following corporate sponsors.</h2>
                 <?php foreach($sponsors as $sponsor):
                     $image = $sponsor['image'];
                     $link = $sponsor['link'];
