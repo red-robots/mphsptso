@@ -27,6 +27,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row-1">
 			<div class="wrapper cap clear-bottom">
+				
 				<?php
 				$facebook_link = get_field("facebook_link","option");
 				$instagram_link = get_field("instagram_link","option");
@@ -40,6 +41,7 @@
 						<?php } ?>
 					</div><!--.social-->
 				<?php endif } ?>
+
 			</div><!--.wrapper-->
 		</div><!--.row-1-->
 		<div class="row-2">
