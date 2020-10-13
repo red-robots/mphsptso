@@ -23,12 +23,11 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
-
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row-1">
 			<div class="wrapper cap clear-bottom">
 				
-				<?php
+				<?php /* Social Media */
 				$facebook_link = get_field("facebook_link","option");
 				$instagram_link = get_field("instagram_link","option");
 				if($facebook_link || $instagram_link) { ?>
