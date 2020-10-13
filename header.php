@@ -39,7 +39,7 @@
 							<a href="<?php echo $instagram_link;?>" target="_blank"><i class="fa fa-instagram"></i></a>
 						<?php } ?>
 					</div><!--.social-->
-				<?php endif } ?>
+				<?php } ?>
 
 			</div><!--.wrapper-->
 		</div><!--.row-1-->
